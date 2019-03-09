@@ -12,7 +12,7 @@
 
 <h1>Address Book Entry Details</h1>
 
-<form asp-page="Create" method="post">
+<form asp-page="Edit" method="post">
     <span>@ViewData["Message"]</span>
 
     <div asp-validation-summary="All" class="validation-summary-errors">
@@ -42,6 +42,7 @@
         <label asp-for="UpdateAddressRequest.PostalCode"></label>
         <input asp-for="UpdateAddressRequest.PostalCode" type="text" class="form-control" placeholder="Postal Code" />
     </div>
+    <input asp-for="UpdateAddressRequest.Id" type="hidden" />
     <button type="submit" class="btn btn-primary">Update Address</button>
 </form>
 
